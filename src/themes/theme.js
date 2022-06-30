@@ -8,11 +8,11 @@ const theme = createTheme({
   palette: {
     primary: {
       // Misalnya kita ingin menggunakan warna dasarnya adalah hijau
-      main: green[400],
+      main: green[600],
     },
     secondary: {
       // Di sini warna secondarynya adalah biru
-      main: blue[500],
+      main: blue[700],
     },
   },
 });
