@@ -54,11 +54,20 @@ const CardMovie = (props) => {
             Precision untuk menyatakan ratingnya itu dibuatkan gambarnya hingga
             per seberapanya? (0.1 = sampai 1 koma di belakang angka)
            */}
-          <Rating
-            value={props.movie.vote_average / 2}
-            precision={0.1}
-            readOnly
-          />
+           <Box
+            sx={{
+              width: 200,
+              display: 'flex',
+              alignItems: 'center',
+            }}
+           >
+            <Rating
+              value={props.movie.vote_average / 2}
+              precision={0.1}
+              readOnly
+            />
+            <Box sx={{ ml: 2 }}>{props.movie.vote_average.toFixed(2)}</Box>
+          </Box>
           <Typography variant="body2">
             Release date: {props.movie.release_date}
           </Typography>

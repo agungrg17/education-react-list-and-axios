@@ -6,7 +6,7 @@ import { Box, Typography } from "@mui/material";
 import "./ListMovies.css";
 import CardMovie from "../components/CardMovie";
 
-const ListMovies = () => {
+const ListMoviesReal = () => {
   // sekarang kita membutuhkan state untuk menampung Movie yang diambil dari TMDB
   const [movies, setMovies] = useState([]);
 
@@ -20,7 +20,7 @@ const ListMovies = () => {
           // Gunakan axios di sini
           const responseDariTMDB = await axios.get(
             // TODO: Jangan lupa masukkan API_KEY yang benarnya di sini yah !
-            "https://api.themoviedb.org/3/movie/popular?api_key=INSERT_API_KEY_HERE"
+            "https://api.themoviedb.org/3/movie/popular?api_key=1e5238a16446199e1393210ccac016b4"
           );
 
           // Jangan lupa set statenya
@@ -45,10 +45,10 @@ const ListMovies = () => {
       {/* Di sini patokan kita sudah berdasarkan state movies */}
       {movies.map((movie) => {
         // Selebihnya di dalam sini sama
-        return <CardMovie movie={movie} />;
+        return <CardMovie key={movie.id} movie={movie} />;
       })}
     </Box>
   );
 };
 
-export default ListMovies;
+export default ListMoviesReal;
