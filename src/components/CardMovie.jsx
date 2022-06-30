@@ -30,7 +30,7 @@ const CardMovie = (props) => {
         */}
         <CardMedia
           component="img"
-          sx={{ width: 1 }}
+          sx={{ width: 150 }}
           // Kita gunakan image berdasarkan prefix dari image tmdb
           image={`${baseUrlForMovie}${props.movie.poster_path}`}
           // image={props.movie.poster_path}
